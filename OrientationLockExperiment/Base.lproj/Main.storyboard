@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hwy-nF-MOQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Nqm-ZE-ua4">
+            <objects>
+                <navigationController id="hwy-nF-MOQ" customClass="NavigationController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tpY-Ld-3Ht">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hyg-e8-bNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flt-BG-7Tx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="94"/>
+        </scene>
+        <!--Landscape-->
+        <scene sceneID="0K7-M3-2t6">
+            <objects>
+                <viewController id="T6g-s1-i9W" customClass="LandscapeViewController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tbc-Zl-9xK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c3-KC-aae">
+                                <rect key="frame" x="181" y="433" width="52" height="30"/>
+                                <state key="normal" title="Portrait"/>
+                                <connections>
+                                    <segue destination="5XD-mV-pF9" kind="show" id="ZUL-xv-vrf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wjJ-22-tE6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8c3-KC-aae" firstAttribute="centerX" secondItem="tbc-Zl-9xK" secondAttribute="centerX" id="3dz-gg-exS"/>
+                            <constraint firstItem="8c3-KC-aae" firstAttribute="centerY" secondItem="tbc-Zl-9xK" secondAttribute="centerY" id="7di-x8-eNf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Landscape" id="z6n-nE-mOm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPi-qT-JuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-646"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFR-Gl-b36">
+                                <rect key="frame" x="181" y="433" width="52" height="30"/>
+                                <state key="normal" title="Portrait"/>
+                                <connections>
+                                    <segue destination="5XD-mV-pF9" kind="show" id="Kjb-HO-TSx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP6-3F-yBI">
+                                <rect key="frame" x="169.5" y="395" width="75" height="30"/>
+                                <state key="normal" title="Landscape"/>
+                                <connections>
+                                    <segue destination="T6g-s1-i9W" kind="show" id="79s-ef-Sb5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrX-lg-9Si">
+                                <rect key="frame" x="141" y="471" width="132" height="30"/>
+                                <state key="normal" title="Present Landscape"/>
+                                <connections>
+                                    <segue destination="b0k-qC-q5S" kind="presentation" modalPresentationStyle="fullScreen" id="JfB-Wx-oVg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kh-jF-7bv">
+                                <rect key="frame" x="153" y="509" width="108" height="30"/>
+                                <state key="normal" title="Present Portrait"/>
+                                <connections>
+                                    <segue destination="k8S-LP-8xp" kind="presentation" modalPresentationStyle="fullScreen" id="Fzm-Hg-8Nm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Kh-jF-7bv" firstAttribute="centerX" secondItem="JrX-lg-9Si" secondAttribute="centerX" id="0bN-ED-OXW"/>
+                            <constraint firstItem="cFR-Gl-b36" firstAttribute="centerX" secondItem="xP6-3F-yBI" secondAttribute="centerX" id="GMJ-LP-ku4"/>
+                            <constraint firstItem="JrX-lg-9Si" firstAttribute="centerX" secondItem="cFR-Gl-b36" secondAttribute="centerX" id="H8V-oZ-8Ua"/>
+                            <constraint firstItem="1Kh-jF-7bv" firstAttribute="top" secondItem="JrX-lg-9Si" secondAttribute="bottom" constant="8" symbolic="YES" id="OUl-wI-RBg"/>
+                            <constraint firstItem="cFR-Gl-b36" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QyP-B1-qmP"/>
+                            <constraint firstItem="cFR-Gl-b36" firstAttribute="top" secondItem="xP6-3F-yBI" secondAttribute="bottom" constant="8" symbolic="YES" id="hBh-LZ-30h"/>
+                            <constraint firstItem="JrX-lg-9Si" firstAttribute="top" secondItem="cFR-Gl-b36" secondAttribute="bottom" constant="8" symbolic="YES" id="p0A-UU-x69"/>
+                            <constraint firstItem="cFR-Gl-b36" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sd6-0d-GRx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wm9-e9-lT8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--Landscape View Controller-->
+        <scene sceneID="vZx-p6-CdK">
+            <objects>
+                <viewController id="b0k-qC-q5S" customClass="LandscapeViewController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LGJ-nY-xdx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-IV-EKq">
+                                <rect key="frame" x="180" y="433" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="b0k-qC-q5S" eventType="touchUpInside" id="Jn0-nL-D0f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O50-MA-o32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Il-IV-EKq" firstAttribute="centerY" secondItem="LGJ-nY-xdx" secondAttribute="centerY" id="Hv2-qn-u2x"/>
+                            <constraint firstItem="6Il-IV-EKq" firstAttribute="centerX" secondItem="LGJ-nY-xdx" secondAttribute="centerX" id="qqp-Ze-YdX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrd-wQ-pz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="852"/>
+        </scene>
+        <!--Portrait View Controller-->
+        <scene sceneID="ltf-Mf-QFD">
+            <objects>
+                <viewController id="k8S-LP-8xp" customClass="PortraitViewController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKO-Hl-fJG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-BU-GYp">
+                                <rect key="frame" x="180" y="433" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="k8S-LP-8xp" eventType="touchUpInside" id="XFi-O9-1Fc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CWv-8d-HBt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m3n-BU-GYp" firstAttribute="centerX" secondItem="wKO-Hl-fJG" secondAttribute="centerX" id="2dI-ED-lQY"/>
+                            <constraint firstItem="m3n-BU-GYp" firstAttribute="centerY" secondItem="wKO-Hl-fJG" secondAttribute="centerY" id="TgI-mX-pvd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pf-2b-Lwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="852"/>
+        </scene>
+        <!--Portrait-->
+        <scene sceneID="Wjw-aa-ayU">
+            <objects>
+                <viewController id="5XD-mV-pF9" customClass="PortraitViewController" customModule="OrientationLockExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a37-WF-YES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-IT-y75">
+                                <rect key="frame" x="169.5" y="433" width="75" height="30"/>
+                                <state key="normal" title="Landscape"/>
+                                <connections>
+                                    <segue destination="T6g-s1-i9W" kind="show" id="su7-8K-twP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nbi-FE-9Pi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t4M-IT-y75" firstAttribute="centerX" secondItem="a37-WF-YES" secondAttribute="centerX" id="5Gd-JZ-THO"/>
+                            <constraint firstItem="t4M-IT-y75" firstAttribute="centerY" secondItem="a37-WF-YES" secondAttribute="centerY" id="NnE-qj-xEw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Portrait" id="gJF-gI-Urc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6n9-7G-a9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="94"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kjb-HO-TSx"/>
+        <segue reference="79s-ef-Sb5"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
